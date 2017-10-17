@@ -1,5 +1,4 @@
 package io.jpotts18.android_mvp.domain;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,26 +12,17 @@ import com.orhanobut.logger.PrettyFormatStrategy;
 
 import butterknife.ButterKnife;
 import io.jpotts18.android_mvp.R;
-
-
 /**
  * Created by John on 10/17/2017.
  */
-
 public class BaseActivity extends AppCompatActivity {
     static final String TAG = BaseActivity.class.getName();
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initLogger(TAG);
         Logger.i("onCreate");
-
-        if (savedInstanceState != null) {
-
-        }
     }
-
     public void initLogger(String TAG) {
         Logger.clearLogAdapters();
         FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
@@ -97,6 +87,4 @@ public class BaseActivity extends AppCompatActivity {
         ButterKnife.setDebug(true);
         ButterKnife.bind(this);
     }
-
-
 }

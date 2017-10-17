@@ -2,12 +2,9 @@ package io.jpotts18.android_mvp.domain.loggin;
 
 import io.jpotts18.android_mvp.domain.BasePresenter;
 import io.jpotts18.android_mvp.domain.BaseView;
-
-
 /**
  * Created by John on 10/16/2017.
  */
-
 public interface LoginContract {
 
     interface View extends BaseView<LoginListPresenter> {

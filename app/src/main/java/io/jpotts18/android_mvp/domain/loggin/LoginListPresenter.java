@@ -1,8 +1,6 @@
 package io.jpotts18.android_mvp.domain.loggin;
-
 import io.jpotts18.android_mvp.domain.models.User;
 import retrofit2.Response;
-
 /**
  * Created by jpotts18 on 5/11/15.
  */
@@ -26,7 +24,6 @@ public class LoginListPresenter implements LoginContract.Presenter, OnLoginInter
         view.showLoginError(throwable);
     }
 
-
     @Override
     public void attachView(LoginContract.View view) {
         this.view = view;
@@ -35,13 +32,11 @@ public class LoginListPresenter implements LoginContract.Presenter, OnLoginInter
     @Override
     public void detachView() {
         this.view = null;
-
     }
 
     @Override
     public void authenticateUser(String user, String password) {
         interactor.authenticate(user, password);
-
     }
 
     @Override

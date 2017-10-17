@@ -1,8 +1,4 @@
 package io.jpotts18.android_mvp.domain.loggin;
-
-
-
-
 import io.jpotts18.android_mvp.domain.Config;
 import io.jpotts18.android_mvp.domain.PipeDriveService;
 
@@ -31,7 +27,6 @@ public class LoginInteractor {
     private Retrofit initRetrofit() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Config.BASE_URL)
-//                .setEndpoint("https://api.github.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
@@ -40,12 +35,6 @@ public class LoginInteractor {
 
     private void handleResponse(Response<User> response) {
         User authUser = response.body();
-        /*Collections.sort(list, new Comparator<Repo>() {
-            @Override
-            public int compare(Repo left, Repo right) {
-                return (left.stargazers_count > right.stargazers_count) ? -1 : 1;
-            }
-        });*/
         listener.onNetworkSuccess(authUser, response);
     }
 
