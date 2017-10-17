@@ -75,7 +75,7 @@ MVC Pattern
 
 #### Notes
 Clean your project from all those file listed in gitignore. 
- git rm -r --cached . 
- git add .
- git commit -m 'Removed all files that are in the .gitignore' 
- git push origin master
+ * ``git rm -r --cached .`` 
+ * ``git add .``
+ * ``git commit -m 'Removed all files that are in the .gitignore'`` 
+ * ``git push origin master``
